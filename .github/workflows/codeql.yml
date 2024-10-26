@@ -38,7 +38,7 @@ jobs:
     - name: Install Required apt Packages
       run: |
         sudo apt-get update
-        sudo apt-get install -y build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo nasm
+        sudo apt-get install -y build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo nasm mtools
           
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
@@ -51,7 +51,7 @@ jobs:
       shell: bash
       run: |
         make toolchain -j4
-        make -j4
+        make
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
