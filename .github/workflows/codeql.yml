@@ -34,13 +34,18 @@ jobs:
       with:
         path: ./toolchain
         key: ${{ runner.os }}-toolchain
-          
+ 
+    - name: Install Required apt Packages
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo libcloog
           
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
+        config-file: ./.github/codeql-config.yml
 
     - if: matrix.build-mode == 'manual'
       shell: bash

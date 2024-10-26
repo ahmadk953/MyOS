@@ -1,0 +1,6 @@
+paths:
+ - 'src'
+ - 'tools'
+ - 'build'
+paths-ignore:
+ - '**/toolchain/**'
