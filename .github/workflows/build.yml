@@ -1,0 +1,33 @@
+name: "Build"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build Toolchain, Tools, and OS
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Cache
+      uses: actions/cache@v4.1.2
+      with:
+        path: ./toolchain
+        key: ${{ runner.os }}-toolchain
+
+    - name: Install Required apt Packages
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo nasm mtools
+
+    - name: Build Toolchain
+      run: make toolchain -j4
+
+    - name: Build OS and Tools
+      run: make -j4
