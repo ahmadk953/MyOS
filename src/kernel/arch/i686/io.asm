@@ -1,4 +1,3 @@
-
 global i686_outb
 i686_outb:
     [bits 32]
@@ -13,4 +12,16 @@ i686_inb:
     mov dx, [esp + 4]
     xor eax, eax
     in al, dx
+    ret
+global i686_Panic
+i686_Panic:
+    cli
+    hlt
+global crash_me
+crash_me:
+    ; div by 0
+    ; mov ecx, 0x1337
+    ; mov eax, 0
+    ; div eax
+    int 0x80
     ret

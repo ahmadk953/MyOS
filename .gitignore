@@ -1,3 +1,6 @@
-/build/
-/toolchain/
-/tools/build/
+build/
+toolchain/
+tools/build/
+.vscode/*.log
+*.err
+bx_enh_dbg.ini
