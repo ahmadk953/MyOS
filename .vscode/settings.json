@@ -2,7 +2,8 @@
   "files.associations": {
     "x86.h": "c",
     "stdio.h": "c",
-    "ctype.h": "c"
+    "ctype.h": "c",
+    "stddef.h": "c"
   },
   "C_Cpp.files.exclude": {
     "**/.vscode": true,
@@ -10,5 +11,6 @@
     "**/build": true,
     "**/toolchain": true
   },
-  "cmake.ignoreCMakeListsMissing": true
+  "cmake.ignoreCMakeListsMissing": true,
+  "C_Cpp.default.compilerPath": "/home/ahmad/MyOS/toolchain/i686-elf/bin/i686-elf-gcc"
 }
