@@ -1,7 +1,7 @@
 # MyOS
 [![Build](https://github.com/ahmadk953/MyOS/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/ahmadk953/MyOS/actions/workflows/build.yml)
 
-> ![WARNING]
+> [!WARNING]
 > Development of this project is currently paused.
 
 A custom OS built in x86_64 assembly and C.
