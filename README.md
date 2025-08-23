@@ -10,7 +10,7 @@ A custom OS built in x86_64 assembly and C.
 
 First, you need to download and install the necessary dependencies:
 ```bash
-sudo apt-get update && sudo apt-get install build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo nasm mtools qemu-system-x86 -y
+sudo apt update && sudo apt install build-essential bison flex libgmp3-dev libmpc-dev libmpfr-dev texinfo nasm mtools dosfstools qemu-system-x86 -y
 ```
 Depending on you distribution of linux, you might have to change the package names (Ex. ``libgmp3-devl`` instead of ``libgmp3-dev``).
 
