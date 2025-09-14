@@ -16,7 +16,7 @@ Depending on you distribution of linux, you might have to change the package nam
 
 Next, you need to downlod and compile the toolchain using:
 ```bash
-make -j{NUMBER_OF_CORES}
+make toolchain -j{NUMBER_OF_CORES}
 ```
 Making sure to replace {NUMBER_OF_CORES} with the number of CPU cores that your machine has (Ex. ``make -j16``) to speed up the building and compiling process (this can take a while, the more CPU cores you allocate, the faster the process is going to be). You only have to do this once, unless the toolchain version is updated.
 
