@@ -26,8 +26,8 @@ void __attribute__((section(".entry"))) start(uint16_t bootDrive)
     printf("Hello world from kernel. This is a test message coming from the kernel.\n");
     printf("The current boot drive is: %d\n", bootDrive);
 
-    // i686_IRQ_RegisterHandler(0, timer);
-    // crash_me();
+    i686_IRQ_RegisterHandler(0, timer);
+    crash_me();
 
 end:
     for (;;)
